@@ -1,3 +1,8 @@
+                        
+					   https://8weeksqlchallenge.com/case-study-1/
+                           Case Study #1 - Danny's Diner
+
+
 CREATE DATABASE dannys_diner;
 USE dannys_diner;
 Show Databases 
@@ -238,7 +243,7 @@ from CTE
 order by customer_id,price desc )
 
 Select *,case 
-when member in ('Y') then row_number() over() 
+when member in ('Y') then row_number() over(order by price desc) 
 else Null
 end as ranking 
 from PQZ
